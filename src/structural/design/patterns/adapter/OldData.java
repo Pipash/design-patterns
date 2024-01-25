@@ -1,6 +1,6 @@
 package structural.design.patterns.adapter;
 
-public class LegacyData {
+public class OldData {
     private float index;
     private String amount;
 
@@ -21,6 +21,6 @@ public class LegacyData {
     }
 
     public void display() {
-        System.out.println("Legacy data are index: "+ index + " amount: "+ amount);
+        System.out.println("Legacy data index: "+ index + " amount: "+ amount);
     }
 }

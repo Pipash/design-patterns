@@ -1,19 +1,19 @@
 package structural.design.patterns.adapter;
 
-public class CurrentData {
+public class LatestData {
     private Integer position;
     private Integer amount;
 
-    public CurrentData(Integer position, Integer amount){
-        this.position = position;
+    public LatestData(Integer position, Integer amount) {
         this.amount = amount;
-    }
-
-    public Integer getAmount() {
-        return amount;
+        this.position = position;
     }
 
     public Integer getPosition() {
         return position;
+    }
+
+    public Integer getAmount() {
+        return amount;
     }
 }

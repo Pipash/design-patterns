@@ -5,12 +5,12 @@ import java.util.stream.Collectors;
 
 public class DataConverterAdapter implements DataConverter {
     @Override
-    public List<LegacyData> convertCurrentToLegacy(List<CurrentData> currentData) {
-        return currentData.stream().map(cData -> {
-            LegacyData lData = new LegacyData();
-            lData.setIndex(cData.getPosition());
-            lData.setAmount(cData.getAmount().toString());
-            return lData;
+    public List<OldData> convertLatestToOld(List<LatestData> latestData) {
+        return latestData.stream().map(lData -> {
+            OldData oData = new OldData();
+            oData.setIndex(lData.getPosition());
+            oData.setAmount(lData.getAmount().toString());
+            return oData;
         }).collect(Collectors.toList());
     }
 }

@@ -7,7 +7,7 @@ public class AdapterMain {
         CurrentDataGenerator generator = new CurrentDataGenerator();
         DataConverterAdapter adapter = new DataConverterAdapter();
 
-        List<LegacyData> legacyData = adapter.convertCurrentToLegacy(generator.generateCurrentData());
-        legacyData.forEach(LegacyData::display);
+        List<OldData> oldData = adapter.convertLatestToOld(generator.generateCurrentData());
+        oldData.forEach(OldData::display);
     }
 }
